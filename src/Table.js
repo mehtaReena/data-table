@@ -74,15 +74,7 @@ export function SelectColumnFilter({
 
 
 
-export function AvatarCell({column, row }) {
-  return (
-    <div className="flex items-center">
 
-        <div className="text-sm text-blue-500 font-bold underline">{row.original[column.regions]}</div>
-
-    </div>
-  )
-}
 
 function Table({ columns, data }) {
   // Use the state and functions returned from useTable to build your UI
@@ -116,6 +108,7 @@ function Table({ columns, data }) {
         />
         {headerGroups.map((headerGroup) =>
           headerGroup.headers.map((column) =>
+
             column.Filter ? (
               <div className="mt-2 sm:mt-0" key={column.id}>
                 {column.render("Filter")}
@@ -185,16 +178,16 @@ function Table({ columns, data }) {
                     prepareRow(row)
                     return (
                       <tr {...row.getRowProps()}>
-                        {row.cells.map(cell => {
+                        {row.cells.map((cell ,idx) => {
                           return (
                             <td
                               {...cell.getCellProps()}
-                              className="px-6 py-4 whitespace-nowrap"
+                              className="px-6 py-4 whitespace-nowrap text-gray-500"
                               role="cell"
                             >
-                              {cell.column.Cell.name === "defaultRenderer"
-                                ? <div className="text-sm text-gray-500">{cell.render('Cell')}</div>
-                                : cell.render('Cell')
+                              {idx===0
+                                ? <div className="text-sm text-blue-500 underline">{cell.render('Cell')}</div>
+                                : <div className="text-sm text-gray-500">{cell.render('Cell')}</div>
                               }
                             </td>
                           )

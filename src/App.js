@@ -1,57 +1,49 @@
 import React from 'react'
-import Table, { AvatarCell,SelectColumnFilter } from './Table'  // new
+import Table, { SelectColumnFilter } from './Table'  // new
 
 const getData = () => {
   const data = [
     {
-      regions: 'central',
-      email:'Central',
+      regions: 'Central',
       title: '135',
-      department: 'Optimization',
-      status: '156',
-      role: '82',
-      age: 27,
+      newleads: '156',
+      close: '82',
+      Contacted: 27,
 
     },
     {
       regions: 'East',
-      email: 'East',
+
       title: '145',
-      department: 'Intranet',
-      status: '12',
-      role: '12',
-      age: 43,
+
+      newleads: '12',
+      close: '12',
+      Contacted: 43,
 
     },
 
     {
       regions: 'West',
-      email: 'South',
       title: '95',
-      department: 'Program',
-      status: '135',
-      role: '16',
-      age: 29,
+      newleads: '135',
+      close: '16',
+      Contacted: 29,
 
     },
     {
       regions: 'South',
-      email: 'West',
       title: '15',
-      department: 'Mobility',
-      status: '142',
-      role: '25',
-      age: 36,
+      newleads: '142',
+      close: '25',
+      Contacted: 36,
 
     },
     {
       regions: 'North',
-      email: 'North',
       title: '15',
-      department: 'Mobility',
-      status: '142',
-      role: '25',
-      age: 36,
+      newleads: '142',
+      close: '25',
+      Contacted: 36,
 
     }
 
@@ -64,10 +56,7 @@ function App() {
   const columns = React.useMemo(() => [
     {
       Header: "Region",
-      accessor: 'name',
-      Cell: AvatarCell,
-      imgAccessor: "imgUrl",
-      regions: "regions",
+      accessor: "regions",
     },
     {
       Header: "Total Leads",
@@ -75,16 +64,16 @@ function App() {
     },
     {
       Header: "New Leads",
-      accessor: 'status',
+      accessor: 'newleads',
 
     },
     {
       Header: "Contacted",
-      accessor: 'age',
+      accessor: 'Contacted',
     },
     {
       Header: "Close",
-      accessor: 'role',
+      accessor: 'close',
       Filter: SelectColumnFilter,  // new
       filter: 'includes',
     },
