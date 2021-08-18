@@ -128,18 +128,18 @@ function Table({ columns, data }) {
 
        <div className="md:flex sm:gap-x-2 align-center mt-4" >
 
-       <div className="md:flex sm:gap-x-2 bg-white p-2 align-center rounded-lg" >
+       <div className="md:flex sm:gap-4  bg-white p-2 align-center rounded-lg" >
         <div className="sm:flex p-2 align-center rounded-lg">Scooters : </div>
-       <div className="sm:flex   sm:gap-x-4 bg-gray-50  p-2 align-center rounded-lg" > Activa  <div>x</div></div>
-       <div className="sm:flex  sm:gap-x-4 bg-gray-50  p-2 align-center rounded-lg" > Cliq   <div>x</div> </div>
-       <div className="sm:flex  sm:gap-x-4 bg-gray-50 p-2 align-center rounded-lg" >Aviator  <div>x</div></div>
+       <div className="sm:flex   sm:gap-4 bg-gray-50  p-2 align-center rounded-lg" > Activa  <div>x</div></div>
+       <div className="sm:flex  sm:gap-4 bg-gray-50  p-2 align-center rounded-lg" > Cliq   <div>x</div> </div>
+       <div className="sm:flex  sm:gap-4 bg-gray-50 p-2 align-center rounded-lg" >Aviator  <div>x</div></div>
        </div>
 
        <div className="sm:flex sm:gap-x-2 bg-white p-2 align-center rounded-lg" >
-       <div className="sm:flex  p-2 align-center rounded-lg">Bikes: </div>
-         <div className="sm:flex  bg-gray-50 p-2 align-center rounded-lg" > Shine125 x</div>
+       <div className="sm:flex sm:gap-x-2 p-2 align-center rounded-lg">Bikes: </div>
+         <div className="sm:flex  sm:gap-x-6  bg-gray-50 p-2 align-center rounded-lg" > Shine125 <div>x</div></div>
        </div>
-       <div className="sm:flex  p-4 align-center rounded-lg underline">clear All filters </div>
+       <div className="sm:flex  p-3 align-center rounded-lg underline">clear All filters </div>
 
        </div>
       {/* table */}
