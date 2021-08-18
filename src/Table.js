@@ -186,7 +186,7 @@ function Table({ columns, data }) {
                               role="cell"
                             >
                               {idx===0
-                                ? <div className="text-sm text-blue-500 underline">{cell.render('Cell')}</div>
+                                ? <div className="text-sm text-blue-500 underline font-bold">{cell.render('Cell')}</div>
                                 : <div className="text-sm text-gray-500">{cell.render('Cell')}</div>
                               }
                             </td>
